@@ -30,7 +30,7 @@ pipeline {
                 }
             }
         }
-
+    }
     post {
         failure {
             input """Pipeline failed.
