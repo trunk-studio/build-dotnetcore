@@ -24,9 +24,10 @@ pipeline {
                 branch 'master'
             }
             steps {
-
-                sh "jx step git credentials"
-                sh "./jx/scripts/release.sh"
+                container('jx-base') {
+                    sh "jx step git credentials"
+                    sh "sh ./jx/scripts/release.sh"
+                }
             }
         }
     }
