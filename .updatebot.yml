@@ -1,5 +1,5 @@
 github:
   organisations:
-  - name: jenkins-x
+  - name: trunksys
     repositories:
-    - name: jenkins-x-platform
+    - name: build-dotnetcore

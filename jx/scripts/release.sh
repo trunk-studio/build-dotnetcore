@@ -19,5 +19,5 @@ docker push docker.io/$ORG/$APP_NAME
 git tag -fa v${VERSION} -m "Release version ${VERSION}"
 git push origin v${VERSION}
 
-updatebot push-version --kind helm jenkinsxio/builder-nodejs ${VERSION}
+updatebot push-version --kind helm trunksys/builder-dotnetcore ${VERSION}
 updatebot update-loop

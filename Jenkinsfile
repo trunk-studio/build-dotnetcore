@@ -3,13 +3,13 @@ pipeline {
         label "jenkins-jx-base"
     }
     environment {
-        ORG         = 'jenkinsxio'
-        APP_NAME    = 'builder-nodejs'
+        ORG         = 'trunksys'
+        APP_NAME    = 'builder-dotnetcore'
     }
     stages {
         stage('CI Build and push snapshot') {
             when {
-                branch 'PR-*'
+                branch 'feature-*'
             }
             steps {
                 container('jx-base') {
