@@ -10,6 +10,7 @@ git config credential.helper store
 export VERSION="$(jx-release-version)"
 echo "Releasing version to ${VERSION}"
 
+docker login --username=$DOCKER_HUB_USER --password=$DOCKER_HUB_PASS
 docker build -t docker.io/$ORG/$APP_NAME:${VERSION} .
 docker push docker.io/$ORG/$APP_NAME:${VERSION}
 docker tag docker.io/$ORG/$APP_NAME:${VERSION} docker.io/$ORG/$APP_NAME:latest
