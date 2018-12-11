@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('CI Build and push snapshot') {
             when {
-                branch 'feature-*'
+                branch 'PR-*'
             }
             steps {
                 container('jx-base') {
